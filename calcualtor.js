@@ -89,7 +89,6 @@ for (i of operatorBtns) {
 }
 
 //PERCENTAGE BUTTON
-
 let percentageBtn = document.getElementById("percentBnt");
 percentageBtn.addEventListener("click", function () {
   numA = document.getElementById("inputValue").value;
@@ -97,6 +96,22 @@ percentageBtn.addEventListener("click", function () {
   numA = parseInt(numA);
   calc.setPercentage(numA);
   document.getElementById("inputValue").value = calc.getPercentage();
+});
+
+//PLUS_MINUS BOTTON
+let plusMinusBtn = document.getElementById("plusMinusBtn");
+plusMinusBtn.addEventListener("click", () => {
+  let numCheck = document.getElementById("inputValue").value;
+
+  numCheck = parseInt(numCheck);
+
+  if (numCheck < 0) {
+    numCheck = Math.abs(numCheck);
+    document.getElementById("inputValue").value = numCheck;
+  } else {
+    numCheck = -Math.abs(numCheck);
+    document.getElementById("inputValue").value = numCheck;
+  }
 });
 
 //EQUALS BUTTON
