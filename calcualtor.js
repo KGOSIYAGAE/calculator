@@ -24,6 +24,10 @@ class calculator {
     this.num2 = numB;
   }
 
+  setPercentage(numA) {
+    this.num1 = numA;
+  }
+
   getAddition() {
     return this.num1 + this.num2;
   }
@@ -38,6 +42,10 @@ class calculator {
 
   getMultiplication() {
     return this.num1 * this.num2;
+  }
+
+  getPercentage() {
+    return this.num1 / 100;
   }
 }
 
@@ -79,6 +87,17 @@ for (i of operatorBtns) {
     inputBox = this.innerHTML;
   });
 }
+
+//PERCENTAGE BUTTON
+
+let percentageBtn = document.getElementById("percentBnt");
+percentageBtn.addEventListener("click", function () {
+  numA = document.getElementById("inputValue").value;
+
+  numA = parseInt(numA);
+  calc.setPercentage(numA);
+  document.getElementById("inputValue").value = calc.getPercentage();
+});
 
 //EQUALS BUTTON
 let equalsBtn = document.querySelectorAll("#equals");
