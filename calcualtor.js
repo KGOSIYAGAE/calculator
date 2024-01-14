@@ -114,7 +114,7 @@ plusMinusBtn.addEventListener("click", () => {
   }
 });
 
-//EQUALS BUTTON
+//EQUALS BUTTONs
 let equalsBtn = document.querySelectorAll("#equals");
 for (i of equalsBtn) {
   i.addEventListener("click", function () {
